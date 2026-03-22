@@ -64,7 +64,19 @@ html{
     /* display: flex;
     justify-content: space-between;*/
     /* align-items: center; */
+    animation: txt 2s ease forwards;
     z-index: 1000;
+}
+
+@keyframes txt {
+        from{
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0); 
+        }
 }
 
 .container{
@@ -108,18 +120,7 @@ html{
     font-size: 14px;
     font-weight: 500;
     color: var(--primary-900);
-    animation: txt 2s ease forwards;
-}
-
-@keyframes txt {
-        from{
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-        to{
-            opacity: 1;
-            transform: translateY(0); 
-        }
+    background-color: var(--color-white);
 }
 
 .logo{
@@ -184,6 +185,7 @@ html{
     .menu{
         display: block;
         cursor: pointer;
+        transform: scaleX(-1);
         z-index: 1;
     }
 
@@ -214,7 +216,7 @@ html{
         display: block; 
         text-align: center;
         text-decoration: none;
-        animation:  anime 1s ease forwards;
+        animation:  anime .5s ease forwards;
     }
 
     @keyframes anime {
