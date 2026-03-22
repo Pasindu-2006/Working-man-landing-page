@@ -161,12 +161,12 @@ html{
 }
 
 .btn-header{
-    padding: .5rem 1.5rem;
+    padding: .7rem 2rem;
     border: none;
     outline: none;
     color: var(--color-white);
     background-color: var(--primary-600);
-    border-radius: 10px;
+    border-radius: 5px;
     font-weight: 500;
     cursor: pointer;
 }
@@ -174,6 +174,89 @@ html{
 .menu{
     display: none;
 }
+
+/* hero section */
+.hero{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(src/Body.jpg);
+}
+
+.contain-box{
+    margin-top: 2rem;
+    padding: 1rem 5rem;
+    color: var(--primary-100);
+    gap: 20px;
+    max-width: 50%;
+    /* background-color: #000E24; */
+    animation: box 2.5s ease forwards;
+    position: relative;
+}
+
+@keyframes box {
+        from{
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0); 
+        }
+}
+
+.contain-box h1{
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.contain-box p{
+    padding: 2rem 0;
+}
+
+.btn-box button{
+    margin-right: 1rem;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: var(--color-white);
+    background-color: var(--primary-600);
+    box-shadow: 0 0 2px var(--primary-900);
+}
+
+#planbtn{
+    background-color: transparent;
+    border: 2px solid var(--primary-600);
+}
+
+.heroimg{
+    position: absolute;
+    width: 480px;
+    height: 700px;
+    bottom: 0;
+    right: 10%;
+    animation: img 2.1s ease forwards;
+}
+
+@keyframes img {
+        from{
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0); 
+        }
+}
+
+
 
 /* small screens */
 @media(max-width:768px){
@@ -229,6 +312,49 @@ html{
             transform: translateX(0); 
         }
     }
+
+    /* hero section */
+    .hero {
+        justify-content: center; /* Content eka center karanna */
+        text-align: center;      /* Text mada karanna */
+        padding: 0 1rem;
+    }
+
+    .contain-box {
+        max-width: 100%;        /* Mobile wala mulu ida-ma ganna */
+        padding: 1rem;          /* Extra padding ain karanna */
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;    /* Buttons center karanna */
+    }
+
+    .contain-box h1 {
+        font-size: 32px;        /* Font size eka mobile ekata galapenna adu kala */
+        line-height: 1.2;
+        font-weight: 600;
+    }
+
+    .contain-box p {
+        font-size: 14px;
+        padding: 1.5rem 0;
+    }
+
+    .btn-box {
+        display: flex;
+        flex-direction: column; /* Buttons ekata yata ekak ena widiyata */
+        gap: 15px;
+        width: 100%;
+    }
+
+    .btn-box button {
+        margin-right: 0;       /* Side margin ain karanna */
+        width: 100%;           /* Full width buttons */
+    }
+
+    .heroimg {
+        display: none;         /* Mobile wala image eka hide karanna */
+    }
 }
 
 @media(max-width:1024px){
@@ -236,4 +362,9 @@ html{
         padding: 1rem;
         position: relative;
     }
+
+    .heroimg{
+        display: none;
+    }
 }
+
