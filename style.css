@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+:root {
+  /* Neutral Palette */
+  /* Use these for your layout structure */
+  --neutral-50: #F5F6F9;  /* [cite: 11] */
+  --neutral-100: #E6E9F0; /* [cite: 12] */
+  --neutral-200: #D7DBE6; /* [cite: 13] */
+  --neutral-300: #C9CEDD; /* [cite: 14] */
+  --neutral-400: #BAC1D4; /* [cite: 15] */
+  --neutral-500: #9CA6C1; /* [cite: 17] */
+  --neutral-600: #818EBO; /* [cite: 18] */
+  --neutral-700: #546286; /* [cite: 20] */
+  --neutral-800: #323B50; /* [cite: 21] */
+  --neutral-900: #11141B; /* [cite: 23] */
+
+  /* Primary Palette */
+  /* Used for interactive elements like CTAs, links, and inputs  */
+  --primary-50: #F4F8FF;  /* [cite: 25] */
+  --primary-100: #DEEAFF; /* [cite: 26] */
+  --primary-200: #BCD6FF; /* [cite: 28] */
+  --primary-300: #9BC1FF; /* [cite: 30] */
+  --primary-400: #7AADFF; /* [cite: 32] */
+  --primary-500: #FE730A; /* [cite: 34] */
+  --primary-600: #0060FC; /* [cite: 36] */
+  --primary-700: #0045B4; /* [cite: 38] */
+  --primary-800: #00296C; /* [cite: 40] */
+  --primary-900: #000E24; /* [cite: 42] */
+
+  /* Secondary Palette */
+  /* Used to indicate secondary focus  */
+  --secondary-50: #FEF4F5;  /* [cite: 44] */
+  --secondary-100: #FDDFE1; /* [cite: 45] */
+  --secondary-200: #FCC0C3; /* [cite: 47] */
+  --secondary-300: #FAA0A5; /* [cite: 49] */
+  --secondary-400: #F88088; /* [cite: 50] */
+  --secondary-500: #F42C38; /* [cite: 51] */
+  --secondary-600: #F00C1A; /* [cite: 52] */
+  --secondary-700: #AB0913; /* [cite: 53] */
+  --secondary-800: #67050B; /* [cite: 54] */
+  --secondary-900: #220204; /* [cite: 55] */
+
+  /* Base Colors */
+  --color-white: #FFFFFF; /* [cite: 57] */
+  --color-black: #000000; /* [cite: 59] */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* display: flex;
+    justify-content: space-between;*/
+    /* align-items: center; */
+    z-index: 1000;
+}
+
+.container{
+    padding: .2rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: var(--primary-100);
+    background-color: var(--primary-900);
+}
+
+.box{
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.box img{
+    width: 20px;
+    height: 20px;
+}
+
+.sub{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.social-icons img{
+    width: 20px;
+    height: 20px;
+    padding: 5px 5px 0 0;
+}
+
+.container-wrapper{
+    padding: .8rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary-900);
+    animation: txt 2s ease forwards;
+}
+
+@keyframes txt {
+        from{
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0); 
+        }
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.navbar{
+    display: inline-flex;
+    gap: 13px;
+    align-items: center;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 12px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: var(--primary-900);
+}
+
+.navbar ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary-900);
+    display: block;
+    bottom: 0;
+    left: 0;
+    transition: .3s ease;
+}
+
+
+.navbar ul li a:hover::after{
+    width: 100%;
+}
+
+.btn-header{
+    padding: .5rem 1.5rem;
+    border: none;
+    outline: none;
+    color: var(--color-white);
+    background-color: var(--primary-600);
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.menu{
+    display: none;
+}
+
+/* small screens */
+@media(max-width:768px){
+    .container,
+    .btn-header{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .container-wrapper{
+        padding: 1rem 2rem;
+        position: relative;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 0; 
+        right: 0;
+        width: 100%;
+        background-color: var(--color-white);
+        padding: 2rem 20px;
+        box-shadow: 0 5px 20px var(--primary-900);
+        display: none; 
+    }
+    .navbar ul.active {
+        display: block;
+    }
+
+    .navbar ul li a {
+        padding-top: 1rem;
+        display: block; 
+        text-align: center;
+        text-decoration: none;
+        animation:  anime 1s ease forwards;
+    }
+
+    @keyframes anime {
+        from{
+            opacity: 0;
+            transform: translateX(-40px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0); 
+        }
+    }
+}
+
+@media(max-width:1024px){
+    .container-wrapper{
+        padding: 1rem;
+        position: relative;
+    }
+}
