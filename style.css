@@ -144,17 +144,22 @@ html{
     color: var(--primary-900);
 }
 
+nav ul li a.active {
+    border-bottom: 3px solid var(--primary-600); /* Oyata oni paata methana danna */
+    font-weight: bold;
+    color: var(--primary-600);
+}
+
 .navbar ul li a::after{
     content: '';
     width: 0%;
     height: 2px;
-    background-color: var(--primary-900);
+    background-color: var(--primary-600);
     display: block;
     bottom: 0;
     left: 0;
     transition: .3s ease;
 }
-
 
 .navbar ul li a:hover::after{
     width: 100%;
@@ -256,9 +261,105 @@ html{
         }
 }
 
+/* services section */
+.services{
+    height: 100vh;
+    padding: 5rem;
+    text-align: center;
+}
+
+.services p{
+    color: var(--primary-600);
+    cursor: pointer;
+}
+
+.services h3{
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--primary-800);
+    padding-bottom: 2.5rem;
+}
+
+.services-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.clms{
+    padding-bottom: 2rem;
+    background-color: var(--primary-50);
+    justify-content: center;
+    border-radius: 5px;
+    border-bottom: .3rem solid var(--primary-400);
+    transition: .4s ease;
+    animation: clms 2s ease forwards;
+}
+
+@keyframes clms {
+        from{
+            opacity: 0;
+            transform: translateY(-40px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0); 
+        }
+    }
+
+.clms:hover{
+    color: var(--color-white);
+    background-color: var(--primary-100);
+}
+
+.clms img{
+    width: 100%;
+    height: auto;
+}
+
+.clbox{
+    text-align: left;
+    padding: 1.4rem;
+}
+
+.clbox h4{
+    color: var(--color-black);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 1rem 0;
+}
+
+.clbox img{max-width: 40px;}
+
+.clbox p{
+    font-size: 14px;
+    color: var(--primary-900);
+}
+
+.clbox a{
+    text-decoration: none;
+    gap: 10px;
+    color: var(--primary-600);
+}
 
 
 /* small screens */
+@media(max-width:1024px){
+    .container-wrapper{
+        padding: 1rem;
+        position: relative;
+    }
+
+    .heroimg{
+        display: block;
+        width: 500px;
+        height: 750px;
+        right: 5%;
+    }
+}
+
+
 @media(max-width:768px){
     .container,
     .btn-header{
@@ -352,19 +453,20 @@ html{
         width: 100%;           /* Full width buttons */
     }
 
-    .heroimg {
+    .heroimg{
         display: none;         /* Mobile wala image eka hide karanna */
     }
-}
-
-@media(max-width:1024px){
-    .container-wrapper{
-        padding: 1rem;
-        position: relative;
-    }
-
-    .heroimg{
-        display: none;
+    
+    /* service section */
+    .services-main{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 }
 
+@media (min-width: 1024px) {
+    .services-main {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
