@@ -8,3 +8,9 @@ menu.addEventListener('click', () => {
 navbar.addEventListener('click', () => {
     navbar.classList.remove("active");
 });
+
+document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target) && !navbar.contains(e.target)) {
+        navbar.classList.remove("active");
+    }
+});

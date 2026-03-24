@@ -289,7 +289,8 @@ nav ul li a.active {
 
 /* services section */
 .services{
-    height: 100vh;
+    min-height: 100vh; /* Fixed height nathi kala */
+    height: auto;
     padding: 5rem;
     text-align: center;
 }
@@ -369,6 +370,105 @@ nav ul li a.active {
     color: var(--primary-600);
 }
 
+/*  pricing section and service info sections */
+.pricing-main{
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    padding: 5rem;
+}
+
+.service-info{
+    display: flex;
+    gap: 3rem;
+    height: auto;
+}
+
+.img-container{
+    max-width: 456px;
+    max-height: 460px;
+    box-shadow: 20px 20px 0px var(--primary-600);
+    animation: img-container 3s ease forwards;
+}
+
+@keyframes img-container{
+    from{
+        opacity: 0;
+        transform: translateX(-40);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.service-info-box{
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    animation: service-info-box 3s ease forwards;
+}
+
+@keyframes service-info-box{
+    from{
+        opacity: 0;
+        transform: translateX(-40);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.service-info-box h2{
+    font-size: 30px;
+    line-height: 2.5rem;
+    font-weight: 500;
+    color: var(--primary-600);
+    padding: 2rem 0;
+}
+
+.service-info-box p{
+    padding:0 2rem 2rem 0;
+    color: var(--primary-800);
+}
+
+.service-list{
+    flex-direction: column;
+}
+
+.list-item{
+    display: flex;
+    gap: 20px;
+    padding-bottom: .8rem;
+    color: var(--primary-800);
+}
+
+.list-item h4{
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.list-btn{
+    display: flex;
+    background-color: var(--primary-600);
+    width: 15rem;
+    padding: 0 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+}
+
+.list-btn button{
+    background-color: transparent;
+    padding: 1rem 2rem;
+    align-items: center;
+    border: none;
+    outline: none;
+    color: var(--primary-100);
+    font-weight: 500;
+    cursor: pointer;
+}
 
 /* small screens */
 @media(max-width:1024px){
@@ -477,7 +577,7 @@ nav ul li a.active {
 
     .btn-box button {
         margin-right: 0;       /* Side margin ain karanna */
-        width: 100%;           /* Full width buttons */
+        max-width: 100%;           /* Full width buttons */
     }
 
     .heroimg{
@@ -488,6 +588,27 @@ nav ul li a.active {
     .services-main{
         justify-content: center;
         align-items: center;
+        text-align: center;
+    }
+
+    /* service-section-info */
+    .pricing-main{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .service-info{
+       flex-direction: column;
+    }
+
+    .img-container{
+        width: 100%;
+        margin: auto;
+    }
+
+    .service-list{
         text-align: center;
     }
 }
