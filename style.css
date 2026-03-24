@@ -56,6 +56,27 @@ html{
     scroll-behavior: smooth;
 }
 
+.arrow-icon{
+    padding: 10px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: auto;
+    background-color: var(--primary-50);
+    border-radius: 100%;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 1px 0 10px var(--primary-700);
+    transform: scaleY(-1);
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.arrow-icon:hover{
+    content: "go home";
+}
+
 .header{
     position: fixed;
     width: 100%;
@@ -215,12 +236,17 @@ nav ul li a.active {
 }
 
 .contain-box h1{
+    margin-top: 5rem;
     font-size: 50px;
     font-weight: 500;
 }
 
 .contain-box p{
     padding: 2rem 0;
+}
+
+.btn-box{
+    display: inline-flex;
 }
 
 .btn-box button{
@@ -353,12 +379,13 @@ nav ul li a.active {
 
     .heroimg{
         display: block;
-        width: 500px;
-        height: 750px;
+        width: 480px;
+        height: 670px;
+        padding-top: 2rem;
+        overflow: hidden;
         right: 5%;
     }
 }
-
 
 @media(max-width:768px){
     .container,
