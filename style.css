@@ -472,13 +472,22 @@ nav ul li a.active {
 }
 
 /* pricing section */
+/* pricing section */
 .pricing {
-    min-height: 100vh; /* height eka min-height kalama mobile wala content kape na */
-    padding: 4rem 1rem; /* Mobile wala side padding thiyaganna */
-    display: flex; /* Meka missing wela thibba */
+    min-height: 100vh; /* height එක min-height කලාම mobile වල content කැපෙන්නෙ නෑ */
+    height: auto;      /* මෙතනට auto එකක් දැම්මාම content එක අනුව section එක දික් වෙනවා */
+    padding: 4rem 1rem; /* Mobile වල side padding තියාගන්න */
+    display: flex; 
     flex-direction: column;
     justify-content: center;
     background-color: var(--neutral-100);
+}
+
+/* pricing main එකට 100vh දීලා තිබ්බ නිසා තමයි Cards එලියට පැන්නේ. ඒක මෙහෙම හැදුවා */
+.pricing-main{
+    width: 100%;
+    height: auto; /* 100vh අයින් කරලා auto දැම්මා */
+    justify-content: center;
 }
 
 .main-container {
@@ -593,7 +602,35 @@ nav ul li a.active {
     margin-top: 1rem;
 }
 
+.about{
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+}
 
+.main-box-about{
+    min-height: 80vh;
+    color: white;
+    padding: 5rem 10rem;
+    background-image: linear-gradient(rgb(43, 43, 43), rgba(0, 0, 0, 0.418)), url('src/Body.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main-box-about h1{
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.main-box-about p{
+    font-size: 1rem;
+}
 
 /* small screens */
 @media(max-width:1024px){
