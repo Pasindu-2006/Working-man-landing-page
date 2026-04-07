@@ -6,6 +6,9 @@
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://en.wikipedia.org/wiki/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://en.wikipedia.org/wiki/JavaScript)
 
+
+--------This is my first project many problems and many bugs in this project because i am not profetional developer i am selfstudy student iy1s student at sliit kandy uni--------
+
 ## 📖 Overview
 **Working Man** is a high-performance, responsive static website designed for professional plumbing services. The goal of this project is to provide a seamless user experience for booking services and viewing pricing plans.
 
